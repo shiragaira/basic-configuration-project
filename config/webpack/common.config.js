@@ -1,15 +1,12 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ReactRefreshPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
 
 module.exports = {
-    mode: 'production',
-    entry: "./src/index.tsx",
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: '[contenthash].js',
-        clean: true
+    entry: "/index.tsx",
+    resolve: {
+        extensions: ['.js','.jsx','.ts','.tsx','.css']
     },
+    context: path.resolve(__dirname, '../../src'),
     module: {
         rules: [
             {
@@ -40,18 +37,7 @@ module.exports = {
             }
         ]
     },
-    resolve: {
-      extensions: ['.js','.jsx','.ts','.tsx','.css']
-    },
-    devServer: {
-        hot: true,
-        historyApiFallback: true,
-    },
     plugins: [
-        new HtmlWebpackPlugin({template: path.join(__dirname, 'public', 'index.html')}),
-        new ReactRefreshPlugin()
+        new HtmlWebpackPlugin({template: 'index.html'}),
     ],
-    performance: {
-        hints: false
-    }
 }
