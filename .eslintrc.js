@@ -2,31 +2,31 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    node: true,
+    node: true
   },
   extends: [
     "eslint:recommended",
     "plugin:react-hooks/recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier",
+    "prettier"
   ],
   overrides: [],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: "latest",
-    sourceType: "module",
+    sourceType: "module"
   },
   plugins: [
     "react",
     "@typescript-eslint",
     "react-hooks",
     "tailwindcss",
-    "prettier",
+    "prettier"
   ],
   rules: {
     "react/react-in-jsx-scope": "off",
     "prettier/prettier": "warn",
-    "@typescript-eslint/no-var-requires": "off",
-  },
+    "@typescript-eslint/no-var-requires": "off"
+  }
 }

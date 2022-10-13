@@ -8,7 +8,11 @@
     "build": "webpack --config=config/webpack/prod.config.js",
     "start": "webpack serve --open --config=config/webpack/dev.config.js",
     "lint": "pnpm eslint src",
-    "lint:fix": "pnpm run lint --fix"
+    "lint:fix": "pnpm run lint --fix",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*": "pnpm run lint:fix"
   },
   "keywords": [],
   "author": "",
@@ -32,9 +36,12 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.10",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-tailwindcss": "^3.6.2",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^8.0.0",
     "image-webpack-loader": "^8.1.0",
+    "lint-staged": "^13.0.3",
     "postcss": "^8.4.18",
     "postcss-loader": "^7.0.1",
     "postcss-preset-env": "^7.8.2",
