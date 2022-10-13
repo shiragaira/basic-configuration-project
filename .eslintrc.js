@@ -17,9 +17,16 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["react", "@typescript-eslint", "react-hooks", "prettier"],
+  plugins: [
+    "react",
+    "@typescript-eslint",
+    "react-hooks",
+    "tailwindcss",
+    "prettier",
+  ],
   rules: {
     "react/react-in-jsx-scope": "off",
-    "prettier/prettier": "error",
+    "prettier/prettier": "warn",
+    "@typescript-eslint/no-var-requires": "off",
   },
-};
+}
