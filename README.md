@@ -1,4 +1,4 @@
-# Scrap Master - Frontend
+# Scrap Masters - Frontend
 
 
 ## Launching the environment
